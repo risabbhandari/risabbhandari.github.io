@@ -3,33 +3,223 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Risab Bhandari</title>
+  <title>Risab Bhandari | Portfolio</title>
+  <meta name="description" content="Risab Bhandari — Portfolio of a full-stack and data engineer. Case studies, experience and contact information." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="container">
+      <div class="topbar">
+        <div class="brand" id="rb-toggle" role="button" aria-label="Toggle theme">
+  <span class="brand-mark">RB</span>
+        </div>
+
+        <nav class="nav">
+          <a href="#projects">Projects</a>
+          <a href="#services">Services</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1 class="hero-title">Hi, I'm Risab</h1>
+          <p class="hero-subtitle">
+            I’m a full-stack developer and data engineer who turns complex ideas into elegant software
+            solutions. From REST APIs and dashboards to mobile apps, I do it all.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View my projects</a>
+            <a class="btn btn-secondary" href="resume.pdf" target="_blank" rel="noopener">Download resume</a>
+          </div>
+        </div>
+
+        <div class="hero-image" aria-label="Headshot">
+          <div class="hero-photo" aria-hidden="true"></div>
+        </div>
+      </section>
+    </div>
+  </header>
+
   <main class="container">
-    <h1>Risab Bhandari</h1>
-    <h2>Full-Stack Developer | Project-Driven Engineer</h2>
+    <!-- Services section -->
+    <section id="services" class="section services">
+      <div class="section-header">
+        <h2>Everything I can do for you</h2>
+        <p class="muted">From APIs to analytics, I provide end-to-end expertise to turn your vision into reality.</p>
+      </div>
 
-    <p>
-      Computer Science student and full-stack developer with experience
-      building production-grade web, mobile, and data-driven systems.
-      Focused on solving real problems through software, data, and APIs.
-    </p>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">📡</div>
+          <div class="service-text">
+            <h3>API Development</h3>
+            <p>I design and implement robust REST and GraphQL APIs that scale with your business.</p>
+          </div>
+        </article>
 
-    <section>
-      <h3>Projects</h3>
-      <ul id="project-list"></ul>
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">📊</div>
+          <div class="service-text">
+            <h3>Data Engineering & ML</h3>
+            <p>From pipelines to predictive models, I transform raw data into actionable insights.</p>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">🕸️</div>
+          <div class="service-text">
+            <h3>Web & Mobile</h3>
+            <p>I build responsive websites and cross-platform mobile apps that your users will love.</p>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">🤖</div>
+          <div class="service-text">
+            <h3>Automation</h3>
+            <p>I automate workflows with scripts and tools so teams move faster with fewer errors.</p>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">👨‍💻</div>
+          <div class="service-text">
+            <h3>Technical Leadership</h3>
+            <p>I lead teams to ship quality software and guide architecture decisions end-to-end.</p>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">💬</div>
+          <div class="service-text">
+            <h3>Consulting</h3>
+            <p>I help shape product roadmaps and technical strategy with practical execution plans.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section>
-      <h3>Contact</h3>
-      <p>
-        <a href="mailto:risabbhandari@webster.edu">Email</a> |
-        <a href="https://github.com/risabbhandari" target="_blank">GitHub</a> |
-        <a href="https://linkedin.com/in/risab-bhandari" target="_blank">LinkedIn</a>
-      </p>
+    <!-- About -->
+    <section id="about" class="section intro-section">
+      <div class="intro-card">
+        <div class="intro-content">
+          <h2>I’m Risab Bhandari</h2>
+          <p class="muted">
+            I’m a software engineer, data analyst, and consultant focused on solving real-world problems through practical, well-designed systems. work on projects where technology can make a tangible difference — whether that’s improving workflows, enabling better decisions with data, or building tools that serve real communities. My goal is to create software that is not only functional, but genuinely useful and sustainable in real-world.
+          </p>
+          <a class="btn btn-secondary" href="#contact">Let’s connect</a>
+        </div>
+      </div>
     </section>
+
+    <!-- Projects section -->
+    <section id="projects" class="section">
+      <div class="section-header">
+        <h2>Projects</h2>
+      </div>
+
+      <div class="controls">
+        <label class="control">
+          <span class="control-label">Search</span>
+          <input id="search" type="search" placeholder="Search: FastAPI, React Native, PostgreSQL..." autocomplete="off" />
+        </label>
+
+        <label class="control">
+          <span class="control-label">Tech filter</span>
+          <select id="techFilter">
+            <option value="all">All</option>
+          </select>
+        </label>
+
+        <button id="reset" class="btn btn-small btn-tertiary" type="button">Reset</button>
+      </div>
+
+      <div id="projectList" class="project-list" aria-live="polite"></div>
+      <p id="emptyState" class="muted empty" hidden>No projects match your search/filter.</p>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <div class="section-header">
+        <h2>Experience</h2>
+      </div>
+
+      <div class="stack">
+        <article class="card">
+          <div class="card-top">
+            <h3>Team Lead — Fun Play Learn</h3>
+            <span class="pill">Mar 2023 – Mar 2024</span>
+          </div>
+          <p>
+            Led a 15-member team delivering curiosity-based learning sessions across 85+ schools, scaling reach from
+            4,000 to 20,000+ children. Built and evolved the organization’s website into a responsive internal dashboard.
+          </p>
+          <p class="meta"><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <h3>Technical Support Associate — Governance Automation Solutions</h3>
+            <span class="pill">Jul 2022 – Jan 2023</span>
+          </div>
+          <p>
+            Automated diagnostics, asset inventory and reporting using Python—saving over ten hours per week.
+            Developed scripts for device configuration, system health monitoring and cleanup tasks.
+          </p>
+          <p class="meta"><strong>Tech:</strong> Python (os, subprocess, csv)</p>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <h3>Software Developer Intern — Governance Automation Solutions</h3>
+            <span class="pill">Jun 2022 – Dec 2022</span>
+          </div>
+          <p>
+            Built responsive UI modules for internal tools and optimized backend APIs. Co-developed a finance
+            management system using the MERN stack.
+          </p>
+          <p class="meta"><strong>Tech:</strong> HTML/CSS/JS, Bootstrap, Node.js, Express, React</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+      <div class="cta-card">
+        <h2>Ready to build something together?</h2>
+        <p class="muted">
+          Whether you need a performant API, an intuitive interface or help turning data into insight, let’s talk
+          about how we can work together.
+        </p>
+        <a class="btn btn-primary" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="section-header">
+        <h2>Contact</h2>
+        <p class="muted">The best way to reach me is via email.</p>
+      </div>
+
+      <div class="contact-card">
+        <a class="contact-email" href="mailto:risabbhandari@webster.edu">risabbhandari@webster.edu</a>
+        <div class="contact-links">
+          <a href="https://github.com/risabbhandari" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/risab-bhandari" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Risab Bhandari</span>
+      <span class="muted">Built with GitHub Pages</span>
+    </footer>
   </main>
 
   <script src="projects.js"></script>

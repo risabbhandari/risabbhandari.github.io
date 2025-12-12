@@ -2,44 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Paa Calendar Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paa Calendar Project | Risab Bhandari</title>
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
   <main class="container">
-    <a href="../index.html">← Back</a>
+    <section class="page">
+      <a class="breadcrumb" href="../index.html">← Back to Portfolio</a>
+      <h1>Paa Calendar Project</h1>
 
-    <h1>Paa Calendar Project</h1>
+      <p class="lead">
+        A calendar generator that outputs downloadable .ics files integrating Nepali Bikram Sambat
+        and Newari lunar dates—compatible with Google and Apple Calendar.
+      </p>
 
-    <p>
-      A digital calendar system integrating Nepali Bikram Sambat and
-      Newari lunar dates into standard calendar formats.
-    </p>
+      <div class="badges" style="margin-top:14px;">
+        <span class="badge">Python</span>
+        <span class="badge">FastAPI</span>
+        <span class="badge">icalendar</span>
+        <span class="badge">Google Calendar API</span>
+        <span class="badge">Next.js</span>
+      </div>
 
-    <h3>Problem</h3>
-    <p>
-      Regional calendars are often incompatible with mainstream digital
-      calendar platforms such as Google and Apple Calendar.
-    </p>
+      <hr class="hr" />
 
-    <h3>Solution</h3>
-    <p>
-      Built a backend service that dynamically generates downloadable
-      calendar files compatible with standard calendar clients.
-    </p>
+      <h2>What I built</h2>
+      <ul class="project-highlights">
+        <li>Mapped date systems into valid iCalendar structures.</li>
+        <li>FastAPI endpoint to generate and serve files dynamically.</li>
+        <li>Import tested for Google + Apple calendar clients.</li>
+      </ul>
 
-    <h3>Architecture & Tech</h3>
-    <ul>
-      <li>Backend: Python, FastAPI</li>
-      <li>Calendar Generation: icalendar</li>
-      <li>APIs: Google Calendar API</li>
-      <li>Frontend: Next.js</li>
-    </ul>
+      <hr class="hr" />
 
-    <h3>Links</h3>
-    <p>
-      <a href="#" target="_blank">GitHub Repository</a>
-    </p>
+      <h2>Links</h2>
+      <p class="muted">
+        <a href="#" target="_blank" rel="noopener">GitHub</a>
+        <span class="sep">•</span>
+        <a href="#" target="_blank" rel="noopener">Demo</a>
+      </p>
+    </section>
   </main>
 </body>
 </html>
